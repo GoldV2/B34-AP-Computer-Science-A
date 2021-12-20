@@ -12,9 +12,9 @@ class PMotion {
         HashMap<String, Runnable> options = createOptions(); 
 
         while (true) {
-            askAxis();
-            askEqu();
-            askVar();
+            option += askAxis();
+            option += askEqu();
+            option += askVar();
             options.get(option).run();
     
             count ++;
@@ -45,14 +45,14 @@ class PMotion {
         return options;
     }
 
-    public static void askAxis() {
+    public static String askAxis() {
         System.out.print("Enter either y or x\n>>> ");
-        option += scan.nextLine();
+        return scan.nextLine();
     }
 
-    public static void askEqu() {
+    public static String askEqu() {
         if (option.equals("x")) {
-            option += "1";
+            return "1";
         }
 
         else {
@@ -60,14 +60,14 @@ class PMotion {
             System.out.println("2: Δy = Viyt + 1/2gt^2");
             System.out.println("3: Vfy^2 = Viy^2 + 2gΔy");
             System.out.print("Enter the respective number for the equation you need\n>>> ");
-            option += scan.nextLine();
+            return scan.nextLine();
         }
     }
 
-    public static void askVar() {
+    public static String askVar() {
         System.out.println("Enter the variable you want to solve for");
         System.out.print("i.e. x, y, Vix, Viy, Vfy, t\n>>> ");
-        option += scan.nextLine();
+        return scan.nextLine();
     }
 
 }
