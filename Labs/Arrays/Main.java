@@ -12,17 +12,14 @@ public class Main {
         while (true) {
             double ind = Double.parseDouble(input(""));
             if (ind < -1 || ind >= size) {
-                System.out.println("INVALID INPUT, try again!");
+                System.out.println("Invalid Input, try again!");
             }
             else if (ind == -1) {
-                System.out.println("PRINTING COUNT FOR EACH INDEX");
-                for (int i=0; i < size; i++) {
-                    System.out.println("Index " + i + ": " + items[i].getCount());
-                }
-                System.out.println("GOODBYE!");
+                display(items);
+                System.out.println("Goodbye!!");
             }
             else if ((int)((ind-(int)ind)*1000) == 123 || (int)((ind-(int)ind)*1000) == 122) {
-                System.out.print("COUNT: " + items[(int)ind].getCount());
+                System.out.print(items[(int)ind].getCount());
             }
             else {
                 int remainder = (int)(ind % 1 * 10);
@@ -52,4 +49,10 @@ public class Main {
         return scan.nextLine();
     }
 
+    public static void display(ArrayItem[] items) {
+        System.out.println("Printing count for each index");
+        for (ArrayItem item : items) {
+            System.out.println(item);
+        }
+    }
 }

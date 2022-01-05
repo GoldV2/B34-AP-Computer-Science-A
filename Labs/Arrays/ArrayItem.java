@@ -16,8 +16,12 @@ public class ArrayItem {
         }
     }
 
-    public int getCount() {
-        return this.count;
+    public String getCount() {
+        return "Count: " + this.count;
+    }
+
+    public String toString() {
+        return "Index: " + this.index + " Count: " + this.getCount();
     }
 
 }
