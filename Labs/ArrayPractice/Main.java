@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.lang.Math;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
@@ -29,7 +30,6 @@ public class Main {
 
         SpecialArray myArray = new SpecialArray(nums);
         System.out.println(myArray);
-
     }
 
     static void input(String str) {

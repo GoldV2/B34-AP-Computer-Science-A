@@ -87,10 +87,10 @@ public class SpecialArray {
 
         for (int i=1; i < this.len -1; i++) {
             if (this.array[i] < this.array[i-1] && this.array[i] < this.array[i+1]) {
-                localMins.add(i);
+                localMins.add(this.array[i]);
             }
             else if (this.array[i] > this.array[i-1] && this.array[i] > this.array[i+1]) {
-                localMaxs.add(i);
+                localMaxs.add(this.array[i]);
             }
         }
 
