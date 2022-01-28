@@ -3,25 +3,12 @@ import java.lang.Math;
 
 public class Equations implements Runnable {
     
-    static double g = 9.81;
+    static double g = -9.81;
     static Scanner scan = new Scanner(System.in);
 
     @Override
     public void run() {
         System.out.println("Function ran");
-    }
-
-    public static double p(String prompt) {
-        System.out.print("Enter " + prompt + "\n>>> ");
-        return scan.nextDouble();
-    }
-
-    public static void d(String variable, double value) {
-        System.out.println(variable + " = " + round(value));
-    }
-
-    public static double round(double value) {
-        return (int)(value*100)/100.0;
     }
 
     public static void pmx1x() {
@@ -95,7 +82,7 @@ public class Equations implements Runnable {
         double a = 0.5*g;
         double b = Viy;
         double c = -y;
-        double r = -b - Math.sqrt(b*b - 4 *a*c)/(2*a);
+        double r = (-b - Math.sqrt(b*b - 4 *a*c))/(2*a);
         d("t", r);
     }
 
@@ -121,5 +108,18 @@ public class Equations implements Runnable {
 
         double r = (Vfy*Vfy - Viy*Viy)/(2*g);
         d("Δy", r);
+    }
+
+    public static double p(String prompt) {
+        System.out.print("Enter " + prompt + "\n>>> ");
+        return scan.nextDouble();
+    }
+
+    public static void d(String variable, double value) {
+        System.out.println(variable + " = " + round(value));
+    }
+
+    public static double round(double value) {
+        return (int)(value*100)/100.0;
     }
 }

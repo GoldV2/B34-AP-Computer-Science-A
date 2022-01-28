@@ -46,7 +46,7 @@ class PMotion {
     }
 
     public static String askAxis() {
-        System.out.print("Enter either y or x\n>>> ");
+        System.out.print("Enter the axis of your equation, y or x\n>>> ");
         return scan.nextLine();
     }
 
