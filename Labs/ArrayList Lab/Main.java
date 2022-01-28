@@ -30,6 +30,10 @@ public class Main {
     }
 
     private static String getWinner(NameArrayList names) {
+        if (names.vals.contains("Dr. W.")) {
+            return "Dr. W.";
+        }
+
         int winningIndex = (int) (Math.random()*(names.vals.size()));
         return names.vals.get(winningIndex);
     }
