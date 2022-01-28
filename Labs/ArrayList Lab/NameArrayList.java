@@ -9,14 +9,8 @@ class NameArrayList {
     }
 
     public void add(String val) {
-        if (!(this.vals.contains(val) || val.equals(""))) {
-            this.vals.add(val);
-        }
-    }
-
-    public void remove(String val) {
         if (this.vals.contains(val)) {
-            this.vals.remove(val);
+            this.vals.add(val);
         }
     }
 
