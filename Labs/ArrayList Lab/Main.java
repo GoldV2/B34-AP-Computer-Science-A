@@ -5,21 +5,21 @@ public class Main {
     private static Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
-        StringList nameList = new StringList();
-        populate(nameList);
-        String winner = getWinner(nameList);
-        System.out.println(nameList);
+        NameArrayList names = new NameArrayList();
+        populate(names);
+        String winner = getWinner(names);
+        System.out.println(names);
         System.out.println("Congratulations to " + winner + "!");
     }
 
-    private static void populate(StringList nameList) {
+    private static void populate(NameArrayList names) {
         while (true) {
             String name = stringInput("Enter to quit. Enter a name");
             if (name.equals("")) {
                 break;
             }
 
-            nameList.add(name);
+            names.add(name);
         }
     }
 
@@ -28,9 +28,9 @@ public class Main {
         return scan.nextLine();
     }
 
-    private static String getWinner(StringList nameList) {
-        int winningIndex = (int) (Math.random()*(nameList.size+1));
-        return nameList.get(winningIndex);
+    private static String getWinner(NameArrayList names) {
+        int winningIndex = (int) (Math.random()*(names.vals.size()));
+        return names.vals.get(winningIndex);
     }
 
 }
