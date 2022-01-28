@@ -8,6 +8,7 @@ public class Main {
         NameArrayList names = new NameArrayList();
         populate(names);
         String winner = getWinner(names);
+        System.out.println(" -- All Participants -- ");
         System.out.println(names);
         System.out.println("Congratulations to " + winner + "!");
     }
