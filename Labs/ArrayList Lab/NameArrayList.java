@@ -19,4 +19,13 @@ class NameArrayList {
             this.vals.remove(val);
         }
     }
+
+    public String toString() {
+        String str = "";
+        for (String name : this.vals) {
+            str += name + "\n";
+        }
+
+        return str;
+    }
 }
