@@ -28,11 +28,11 @@ public class Artist {
     }
 
     public String toString() {
-        String str = "\n\nAlbums:";
+        String str = "\nAlbums:";
         for (Album album : this.albums) {
             String albumStr = "\n"+album.name+"\n\tSongs:";
             for (Song song : album.songs) {
-                albumStr += "\n\t"+song.name+"\n\t\tPrice: "+song.price+" Rating: "+song.rating;
+                albumStr += "\n\t"+song.name+"\n\t\tPrice: "+song.price+" | Rating: "+song.rating;
             }
             str += albumStr;
         }
