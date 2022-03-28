@@ -15,7 +15,7 @@ public class Animal {
     }
 
     public void getSpecial() {
-        System.out.println(this.name+"'s special thing is that ");
+        System.out.print(this.name+"'s special thing is that ");
     }
 
     public String toString() {
