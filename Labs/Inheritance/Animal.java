@@ -14,6 +14,10 @@ public class Animal {
         this.age = Main.intInput("Enter the animal's age");
     }
 
+    public String getSpecial() {
+        return this.name+"'s special thing is that ";
+    }
+
     public String toString() {
         return this.name + " the " + this.species + " is " + this.weight + " lbs and " + age + " years old.";
     }

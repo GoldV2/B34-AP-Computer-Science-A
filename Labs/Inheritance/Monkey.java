@@ -7,4 +7,8 @@ public class Monkey extends Primate {
         this.steals = Main.stringInput("Enter what the monkey steals");
         species = "Monkey";
     }
+
+    public String getSpecial() {
+        return super.getSpecial() + "they steal " + steals;
+    }
 }

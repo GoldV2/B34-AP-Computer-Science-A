@@ -10,6 +10,7 @@ public class Main {
             System.out.println("1: see all animals");
             System.out.println("2: add an animal");
             System.out.println("3: hear an animal speak");
+            System.out.println("4: see what is special about the animal");
             System.out.println("0: quit");
             
             int udo = Main.intInput("");
@@ -23,6 +24,10 @@ public class Main {
 
             else if (udo == 3) {
                 z.hearAnimal();
+            }
+
+            else if (udo == 4) {
+                z.seeSpecial();
             }
 
             else if (udo == 0) {

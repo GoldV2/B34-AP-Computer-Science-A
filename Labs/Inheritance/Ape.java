@@ -7,4 +7,8 @@ public class Ape extends Primate {
         this.deadliftMax = Main.intInput("Enter the ape's deadlift max");
         species = "Ape";
     }
+
+    public String getSpecial() {
+        return super.getSpecial() + "they deadlift " + deadliftMax;
+    }
 }

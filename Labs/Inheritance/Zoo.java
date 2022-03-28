@@ -32,6 +32,15 @@ public class Zoo {
         }
     }
 
+    public void seeSpecial() {
+        this.seeAnimals();
+
+        if (this.animals.size() > 0) {
+            int i = Main.intInput("Enter a number to learn what the animal does");
+            this.animals.get(i).getSpecial();
+        }
+    }
+
     public void addAnimal() {
         for (int i = 0; i < this.displayAnimals.length; i++) {
             System.out.println(i + ": " + this.displayAnimals[i]);
