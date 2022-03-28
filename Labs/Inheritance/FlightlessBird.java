@@ -8,7 +8,8 @@ public class FlightlessBird extends Bird {
         species = "Flightless Bird";
     }
 
-    public String getSpecial() {
-        return super.getSpecial() + "their max speed is " + speedMax;
+    public void getSpecial() {
+        super.getSpecial();
+        System.out.print("their max speed is " + speedMax);
     }
 }

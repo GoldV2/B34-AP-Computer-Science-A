@@ -8,7 +8,8 @@ public class FlyingBird extends Bird {
         species = "Flying Bird";
     }
 
-    public String getSpecial() {
-        return super.getSpecial() + "their max flying height is " + heightMax;
+    public void getSpecial() {
+        super.getSpecial();
+        System.out.print("their max flying height is " + heightMax);
     }
 }

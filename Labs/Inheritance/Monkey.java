@@ -8,7 +8,8 @@ public class Monkey extends Primate {
         species = "Monkey";
     }
 
-    public String getSpecial() {
-        return super.getSpecial() + "they steal " + steals;
+    public void getSpecial() {
+        super.getSpecial();
+        System.out.print("they steal " + steals);
     }
 }
