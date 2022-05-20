@@ -21,12 +21,15 @@ class Main {
     }
 
     public static boolean isPrime(int num) {
+        int i = 2;
         int max = num/2;
-        for (int i = 2; i <= max; i++) {
+        do {
             if (num%i == 0) {
                 return false;
             }
+            i++;
         }
+        while (i <= max);
         return true;
     }
 
